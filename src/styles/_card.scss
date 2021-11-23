@@ -1,0 +1,102 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f7f7f7, #f0f0f0);
+  box-shadow: 3px 3px 8px #d3d3d3, -3px -3px 8px #ededed;
+  height: auto;
+  // overflow: hidden;
+
+  .top-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+
+    h3 {
+      font-size: 1.4rem;
+      padding: 5px 2rem;
+      border-radius: 15px;
+
+      &:hover {
+        cursor: pointer;
+        background: #fff;
+      }
+    }
+  }
+
+  .album-list {
+    grid-gap: 24px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+    overflow-y: hidden;
+    padding: 0.5rem 0;
+    overflow: hidden;
+    // overflow-x: scroll;
+    // overflow-y: hidden;
+    height: 280px;
+    transition: height 1s ease;
+
+    &.see-all {
+      height: auto !important;
+    }
+
+    &.minimize {
+      height: 270px !important;
+    }
+  }
+
+  .artist-list {
+    grid-gap: 24px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+    overflow-y: hidden;
+    padding: 0.5rem 0;
+    overflow: hidden;
+    // overflow-x: scroll;
+    // overflow-y: hidden;
+    height: 252px;
+    transition: height 1s ease;
+
+    &.see-all {
+      height: auto !important;
+    }
+
+    &.minimize {
+      height: 248px !important;
+    }
+
+    .artist {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 236px;
+      padding: 1rem;
+      border-radius: 15px;
+
+      img {
+        width: 150px;
+        border-radius: 50%;
+      }
+      h3 {
+        padding: 1rem 0 0 0;
+      }
+      &:hover {
+        transform: scale(1.02);
+        background-color: rgb(237, 252, 247);
+        cursor: pointer;
+      }
+    }
+  }
+}

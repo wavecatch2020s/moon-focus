@@ -1,0 +1,134 @@
+// Time Control - this part is same for both states of Player
+.player .row-wrapper {
+  // border: 1px dotted #333;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+
+  .volume-control {
+    position: relative;
+    padding: 1rem;
+    color: rgb(48, 48, 48);
+    // border: 1px dotted #333;
+    width: 65px;
+    height: 55px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .svg-filter {
+      filter: invert(20%) sepia(3%) saturate(4%) hue-rotate(314deg)
+        brightness(96%) contrast(98%);
+    }
+
+    &:hover {
+      .svg-filter {
+        filter: invert(32%) sepia(9%) saturate(4%) hue-rotate(325deg)
+          brightness(91%) contrast(96%);
+      }
+      #vertical {
+        display: block;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .time-control {
+    flex: 1;
+    // background: lightcoral;
+    display: flex;
+    align-items: center;
+
+    input {
+      // width: 100%;
+      flex: 1;
+      padding: 1rem 0;
+      width: 100%;
+      -webkit-appearance: none;
+      cursor: pointer;
+      background: transparent;
+    }
+    p {
+      // display: flex;
+      animation: 2s ease 0s 1 appear;
+      padding: 1rem;
+      height: 51px;
+      min-width: 65px;
+      // border: 1px dotted #333;
+      // justify-content: center;
+      // content: "";
+    }
+
+    input[type="range"]:focus {
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 16px;
+      width: 16px;
+    }
+
+    .track {
+      width: 100%;
+      height: 10px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+    }
+
+    .animate-track {
+      background-color: rgb(210, 214, 221);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(0%);
+      padding: 1rem;
+      pointer-events: none;
+    }
+
+    @keyframes appear {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    padding: 1rem;
+    color: #ff9c9c;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      outline: none;
+    }
+
+    .heart {
+      &:hover {
+        filter: invert(73%) sepia(48%) saturate(1308%) hue-rotate(304deg)
+          brightness(113%) contrast(105%);
+      }
+    }
+  }
+}
+
+.player.width-2 {
+  .row-wrapper {
+    width: 60%;
+    // background: #ff9c9c;
+  }
+}

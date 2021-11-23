@@ -1,0 +1,34 @@
+.right-side {
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  // overflow-y: scroll;
+
+  .song-and-player {
+    width: 100%;
+    display: flex;
+    transition: opacity 1s ease;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.4) transparent;
+  }
+
+  /* Works on Chrome/Edge/Safari */
+  *::-webkit-scrollbar {
+    width: 15px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.4);
+    border-radius: 20px;
+    border: transparent;
+  }
+}

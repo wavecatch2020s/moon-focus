@@ -1,0 +1,33 @@
+.sidebar .playlist-item {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 5px;
+  background-color: #fff;
+  transition: background-color 1s ease;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  .song-info {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+  }
+
+  img {
+    width: 30%;
+  }
+
+  &:hover {
+    background-color: rgb(238, 240, 243);
+  }
+
+  &.highlight {
+    background: rgb(236, 238, 244);
+  }
+}

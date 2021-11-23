@@ -1,0 +1,30 @@
+.right-side nav {
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  background: linear-gradient(to right, rgb(247, 246, 246), rgb(229, 255, 246));
+  box-shadow: 3px 14px 19px -12px rgba(0, 0, 0, 0.075);
+  max-height: 4rem;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    h2 {
+      font-size: 1.5rem;
+      padding: 10px;
+    }
+
+    &:active {
+      outline: none;
+      transform: scale(0.92);
+    }
+  }
+}

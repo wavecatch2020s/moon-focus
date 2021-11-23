@@ -1,0 +1,115 @@
+.sidebar {
+  background-color: #fff;
+  height: 100vh;
+  min-width: 350px;
+  max-width: 350px;
+  padding: 1rem 0;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 2px 2px 50px rgb(221, 221, 221);
+  transition: margin-left 1s ease;
+  position: relative;
+  z-index: 50;
+
+  &.hide-left {
+    margin-left: -350px;
+  }
+
+  .playlist {
+    width: 100%;
+    // border: 1px dotted #333;
+    padding: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &:first-child {
+      background-color: #333;
+      border-top: 1px solid rgb(189, 189, 189);
+    }
+  }
+  .tab-btn {
+    display: flex;
+    // flex: 1;
+    // border: 1px dotted #333;
+    min-width: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    h2 {
+      padding: 1rem;
+      flex: 1;
+      text-align: center;
+    }
+
+    img {
+      padding: 1rem;
+      margin-right: -63px;
+      margin-top: -20px;
+      background-color: rgb(219, 203, 255);
+      border-radius: 0 10px 10px 0;
+      z-index: 35;
+      color: #fff;
+
+      &.glow {
+        // box-shadow: 0 0 30px rgb(145, 145, 145), 0 0 30px rgb(30, 68, 66);
+        animation: glowAnim 1s ease;
+      }
+    }
+
+    .minimize {
+      // rotate: 90deg;
+
+      padding: 1rem;
+      margin-top: -20px;
+      margin-right: -64px;
+      background-color: rgb(225, 211, 255);
+      border-radius: 0 10px 10px 0;
+      z-index: 35;
+      color: #fff;
+    }
+
+    .minimize > * {
+      transform: rotate(270deg);
+    }
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+  }
+
+  /* Works on Chrome/Edge/Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.7);
+    border-radius: 20px;
+    border: transparent;
+  }
+}
+
+@keyframes glowAnim {
+  0% {
+    box-shadow: 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333,
+      0 0 0 #333, 0 0 0 #955ea0, 0 0 0 #955ea0, 0 0 0 #955ea0, 0 0 0 #955ea0,
+      0 0 0 #955ea0, 0 0 0 #955ea0;
+  }
+  50% {
+    box-shadow: 0 0 5px #333, 0 0 5px #333, 0 0 5px #333, 0 0 5px #333,
+      0 0 5px #333, 0 0 5px #333, 0 0 10px #955ea0, 0 0 10px #955ea0,
+      0 0 10px #955ea0, 0 0 10px #955ea0, 0 0 10px #955ea0, 0 0 10px #955ea0;
+  }
+  100% {
+    box-shadow: 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333,
+      0 0 0 #333, 0 0 0 #955ea0, 0 0 0 #955ea0, 0 0 0 #955ea0, 0 0 0 #955ea0,
+      0 0 0 #955ea0, 0 0 0 #955ea0;
+  }
+}
