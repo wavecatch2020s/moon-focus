@@ -45,6 +45,40 @@
     height: 280px;
     transition: height 1s ease;
 
+    .album-cover {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      // border: 1px dotted #333;
+      background-color: rgb(251, 251, 252);
+      // margin: 5px
+      border-radius: 15px;
+      height: 262px;
+
+      &.see-all {
+        height: auto !important;
+      }
+
+      img {
+        width: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      h4.song-info {
+        padding: 0.5rem 1rem;
+        text-align: center;
+        // width: 150px;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+        background-color: rgb(233, 234, 243);
+        cursor: pointer;
+      }
+    }
+
     &.see-all {
       height: auto !important;
     }

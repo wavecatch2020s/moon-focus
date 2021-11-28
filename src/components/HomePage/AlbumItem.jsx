@@ -24,7 +24,7 @@ const AlbumItem = ({ album }) => {
   return (
     <div onClick={selectAlbumHandler} key={album.id} className="album-cover">
       <img src={album.cover} alt={album.name} />
-      <h4>{album.name}</h4>
+      <h4 className="song-info">{album.name}</h4>
     </div>
   );
 };
